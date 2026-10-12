@@ -1,0 +1,427 @@
+
+:root {
+    --background: #f7f4fc;
+    --text: #292334;
+    --accent: #7447b8;
+    --card: #ffffff;
+    --border: #ddd5e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#dark-toggle {
+    position: absolute;
+    left: -9999px;
+}
+
+.site-wrapper {
+    --page-background: var(--background);
+    --page-text: var(--text);
+    --card-background: var(--card);
+    --line-color: var(--border);
+
+    background-color: var(--page-background);
+    color: var(--page-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* dark mode lamma el checkbox yet3allem */
+#dark-toggle:checked ~ .site-wrapper {
+    --page-background: #202027;
+    --page-text: #f5f3fa;
+    --card-background: #303039;
+    --line-color: #55515e;
+}
+
+header {
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mode-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.mode-button:hover,
+.mode-button:focus-visible {
+    background-color: #59338f;
+}
+
+#dark-toggle:focus-visible ~ .site-wrapper .mode-button {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.nav-links a {
+    color: var(--page-text);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    color: var(--accent);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.welcome {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.welcome p {
+    line-height: 1.6;
+}
+
+.featured {
+    padding-bottom: 50px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--line-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+}
+
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content p {
+    line-height: 1.5;
+}
+
+.event-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.event-button:hover,
+.event-button:focus-visible {
+    background-color: #59338f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--line-color);
+}
+
+footer a {
+    color: var(--accent);
+}
+
+@media (max-width: 375px) {
+    .site-name {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .welcome {
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+
+.event-info,
+.review-section {
+    margin-bottom: 40px;
+}
+
+.event-info p,
+.event-info li {
+    line-height: 1.7;
+}
+
+.event-info ul,
+.event-info ol {
+    padding-left: 25px;
+}
+
+.details-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.review-section article {
+    background-color: var(--card-background);
+    border: 1px solid var(--line-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.review-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-section input,
+.review-section textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid var(--line-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--page-text);
+    font-family: Arial, sans-serif;
+}
+
+.review-section button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+.review-section button:hover,
+.review-section button:focus-visible {
+    background-color: #59338f;
+}
+
+
+@media (min-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.schedule-section {
+    margin-bottom: 40px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-background);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid var(--line-color);
+}
+
+th {
+    background-color: var(--accent);
+    color: white;
+}
+
+td a {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+tr:hover td {
+    background-color: var(--line-color);
+}
+
+.schedule-section article {
+    background-color: var(--card-background);
+    border: 1px solid var(--line-color);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+
+.registration-section,
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.registration-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--line-color);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.registration-card input,
+.registration-card select,
+.registration-card textarea {
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid var(--line-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--page-text);
+    font-family: Arial, sans-serif;
+}
+
+.registration-card input[type="range"],
+.registration-card input[type="color"],
+.registration-card input[type="checkbox"],
+.registration-card input[type="radio"] {
+    width: auto;
+}
+
+.registration-card fieldset {
+    border: 1px solid var(--line-color);
+    border-radius: 5px;
+    margin: 10px 0;
+    min-width: 0;
+}
+
+.registration-card button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+.registration-card button:hover,
+.registration-card button:focus-visible {
+    background-color: #59338f;
+}
+
+.registration-card input:focus,
+.registration-card textarea:focus,
+.registration-card select:focus {
+    outline: 2px solid var(--accent);
+}
+
+.contact-section a {
+    color: var(--accent);
+}
+
+
+/* mobile table 3ashan el kalam mayetza7amsh */
+@media (max-width: 767px) {
+    .table-wrapper table {
+        min-width: 650px;
+    }
+}

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="dark-toggle">
+
+    <div class="site-wrapper">
+
+        <header>
+            <div class="header-content">
+                <p class="site-name">Campus Events Guide</p>
+
+                <label for="dark-toggle" class="mode-button">
+                    Dark Mode
+                </label>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="event-details.html">Event Details</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </header>
+
+       
+<main>
+
+    <section class="welcome">
+        <h1>Zewail City Fashion Week</h1>
+        <p>Student Life | November 14, 2026</p>
+    </section>
+
+    <section class="event-info">
+        <h2>About the Event</h2>
+
+        <img src="assets/fashion-week.jpg"
+             alt="Models walking at a fashion show"
+             class="details-image">
+
+        <p>
+            Join Zewail City Fashion Week for a celebration
+            of student creativity, fashion, and personal style.
+            Enjoy a student fashion showcase and meet other
+            students interested in design and fashion.
+        </p>
+
+        <h2>Event Information</h2>
+
+        <ul>
+            <li>Date: November 14, 2026</li>
+            <li>Time: 2:00 PM</li>
+            <li>Venue: Zewail City Auditorium</li>
+            <li>Category: Student Life</li>
+            <li>Entry: Free for students</li>
+        </ul>
+
+        <h2>Event Agenda</h2>
+
+        <ol>
+            <li>2:00 PM - Welcome and Introduction</li>
+            <li>2:30 PM - Student Fashion Showcase</li>
+            <li>3:30 PM - Creative Design Discussion</li>
+            <li>4:00 PM - Closing</li>
+        </ol>
+
+        <h2>Event Media</h2>
+
+        <video controls width="500">
+            <source src="assets/fashion-video.mp4"
+                    type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+
+        <p>
+            <a href="registration.html" class="event-button">
+                Register Now
+            </a>
+        </p>
+    </section>
+
+    <section class="review-section">
+        <h2>Leave a Review</h2>
+
+        <article>
+            <h3>Share Your Feedback</h3>
+
+            <form action="#" method="get">
+
+                <label for="review-name">Your Name</label>
+                <input type="text"
+                       id="review-name"
+                       name="review-name"
+                       required
+                       maxlength="50">
+
+                <label for="review-email">Email</label>
+                <input type="email"
+                       id="review-email"
+                       name="review-email"
+                       required>
+
+                <label for="review-text">Your Review</label>
+                <textarea id="review-text"
+                          name="review-text"
+                          rows="5"
+                          required
+                          maxlength="500"></textarea>
+
+                <label for="review-file">Upload a Photo</label>
+                <input type="file"
+                       id="review-file"
+                       name="review-file"
+                       accept="image/*">
+
+                <button type="submit">Submit Review</button>
+
+            </form>
+        </article>
+    </section>
+
+</main>
+
+
+        <footer>
+            <p>&copy; 2026 Campus Events Guide</p>
+            <p>
+                Follow us:
+                <a href="https://www.instagram.com/">Instagram</a>
+                |
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

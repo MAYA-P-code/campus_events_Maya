@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Campus Events Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="dark-toggle">
+
+    <div class="site-wrapper">
+
+        <header>
+            <div class="header-content">
+                <p class="site-name">Campus Events Guide</p>
+
+                <label for="dark-toggle" class="mode-button">
+                    Dark Mode
+                </label>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="event-details.html">Event Details</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </header>
+
+       
+<main>
+
+    <section class="welcome">
+        <h1>Fashion Week Registration</h1>
+        <p>
+            Register for Zewail City Fashion Week
+            on November 14, 2026.
+        </p>
+        <p>Venue: Zewail City Auditorium</p>
+    </section>
+
+    <section class="registration-section">
+        <h2>Registration Form</h2>
+
+        <article class="registration-card">
+            <h3>Attendee Information</h3>
+
+            <form action="#" method="get">
+
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name"
+                       name="full-name" required
+                       maxlength="50"
+                       pattern="[A-Za-z ]{2,50}"
+                       title="Use letters and spaces only">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       name="email" required>
+
+                <label for="portfolio">Portfolio or Website (Optional)</label>
+                <input type="url" id="portfolio"
+                       name="portfolio"
+                       placeholder="https://example.com">
+
+                <label for="tickets">Number of Tickets</label>
+                <input type="number" id="tickets"
+                       name="tickets" min="1" max="3"
+                       value="1" required>
+
+                <label for="interest">Interest in Fashion (1–10)</label>
+                <input type="range" id="interest"
+                       name="interest" min="1" max="10">
+
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date"
+                       name="event-date"
+                       value="2026-11-14"
+                       min="2026-11-14"
+                       max="2026-11-14"
+                       required>
+
+                <label for="color">Favorite Fashion Color</label>
+                <input type="color" id="color"
+                       name="color" value="#7447b8">
+
+                <label for="arrival">Expected Arrival Time</label>
+                <input type="time" id="arrival"
+                       name="arrival"
+                       min="13:00" max="16:00"
+                       required>
+
+                <label for="student-file">Upload Student ID</label>
+                <input type="file" id="student-file"
+                       name="student-file"
+                       accept="image/*,.pdf">
+
+                <fieldset>
+                    <legend>Preferred Event Activity</legend>
+
+                    <input type="radio" id="showcase"
+                           name="activity" value="showcase"
+                           required>
+                    <label for="showcase">Fashion Showcase</label>
+
+                    <input type="radio" id="discussion"
+                           name="activity" value="discussion">
+                    <label for="discussion">Design Discussion</label>
+                </fieldset>
+
+                <label for="role">Attendee Category</label>
+                <select id="role" name="role" required>
+                    <option value="">Select a category</option>
+                    <option value="student">Student</option>
+                    <option value="staff">Staff</option>
+                    <option value="guest">Guest</option>
+                </select>
+
+                <label for="notes">Accessibility Needs or Notes</label>
+                <textarea id="notes" name="notes"
+                          rows="4" maxlength="300"
+                          placeholder="Optional notes"></textarea>
+
+                <fieldset>
+                    <legend>Confirmation</legend>
+
+                    <input type="checkbox" id="agree"
+                           name="agree" required>
+                    <label for="agree">
+                        I confirm my registration details are correct.
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+
+            </form>
+        </article>
+    </section>
+
+    <section class="contact-section">
+        <h2>Event Contact</h2>
+        <p>
+            For questions about registration,
+            contact the event organizing team.
+        </p>
+        <p>Email:
+            <a href="mailto:s-maya.aboamer@zewailcity.edu.eg">
+                s-maya.aboamer@zewailcity.edu.eg
+            </a>
+        </p>
+    </section>
+
+</main>
+
+
+        <footer>
+            <p>&copy; 2026 Campus Events Guide</p>
+            <p>
+                Follow us:
+                <a href="https://www.instagram.com/">Instagram</a>
+                |
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
